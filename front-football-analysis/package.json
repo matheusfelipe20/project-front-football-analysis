@@ -2,7 +2,7 @@
   "name": "front-football-analysis",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://matheusfelipe20.github.io/Project-Front-Football-Analysis",
+  "homepage": "https://matheusfelipe20.github.io/project-front-football-analysis",
   "dependencies": {
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
