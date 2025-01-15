@@ -6,6 +6,7 @@ import './teamPage.css'
 
 import iconFootball from "../../../assets/icons/icon-football.svg";
 import countries from "../../../assets/icons/country/countries.json";
+import AnalysisPanel from "./StatisticsPanel/analysisPanel";
 
 const TeamPage = () => {
   const { teamId } = useParams();
@@ -50,38 +51,38 @@ const TeamPage = () => {
   const flagSrc = countryCode ? require(`../../../assets/icons/country/${countryCode.toLowerCase()}.svg`) : null;
 
   return (
-    <div className="team-details">
-      <div className="panel-details">
-        <div className="details-header-intro">
-          <img className="details-sport-icon" src={iconFootball} alt="icone bola de futebol"/>
-          <p className="details-sport-text">Futebol</p>
-          <p className="details-sport-text">•</p>
-          <div className="details-country">
+    <div className="team-information">
+      <div className="panel-information">
+        <div className="information-header-intro">
+          <img className="information-sport-icon" src={iconFootball} alt="icone bola de futebol"/>
+          <p className="information-sport-text">Futebol</p>
+          <p className="information-sport-text">•</p>
+          <div className="information-country">
             {leagueDetails.country && (
               <>
                 {flagSrc && (
                   <img
                     src={flagSrc}
                     alt={`${leagueDetails.country} flag`}
-                    className="details-country-flag"
+                    className="information-country-flag"
                   />
                 )}
-                <p className="details-sport-text">{leagueDetails.country}</p>
+                <p className="information-sport-text">{leagueDetails.country}</p>
               </>
             )}
           </div>
         </div>
-        <div className="details-conteiner">
-          <img src={team.imageUrl} alt={team.name} className="team-image" />
-          <div className="details-team-info">
-            <h1 className="details-team-name">{team.name}</h1>
-            <span className="details-team-leagueName">Liga: {leagueDetails.name}</span>
+        <div className="information-conteiner">
+          <img src={team.imageUrl} alt={team.name} className="information-team-image" />
+          <div className="information-team-info">
+            <h1 className="information-team-name">{team.name}</h1>
+            <span className="information-team-leagueName">Liga: {leagueDetails.name}</span>
           </div>
         </div>
       </div>
-      {/* <div className="panel-statistic">
-          <p>Estatísticas do time</p>
-      </div> */}
+      <div className="panel-analysis">
+        <AnalysisPanel teamId={teamId}/>
+      </div>
     </div>
   );
 };

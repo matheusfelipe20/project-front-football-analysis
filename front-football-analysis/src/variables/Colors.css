@@ -5,6 +5,8 @@
 
     --background-header-top: #fec300;
     --background-header-down: #d1a000;
+    --background-button-statics-home: #fec300;
+    --background-button-statics-out: #e6b71e;
 
     --effect-elevation: rgba(34, 34, 38, 0.301);
 }

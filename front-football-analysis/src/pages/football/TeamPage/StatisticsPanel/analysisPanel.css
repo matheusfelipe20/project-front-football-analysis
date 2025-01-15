@@ -1,0 +1,66 @@
+.panel-statistic {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 16px;
+  border: #e0e0e0 solid 1.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.panel-statistic p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+  
+.statistics-tabs {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+  
+.statistics-tabs button {
+  background-color: #e0e0e0;
+  color: #979797;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+.statistics-tabs button:hover {
+  background-color: var(--background-button-statics-out);
+  color: #fff;
+}
+  
+.statistics-tabs .active {
+  background-color: var(--background-button-statics-home);
+  color: #fff;
+}
+  
+.statistics-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics-summary h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+}
+  
+.statistic-item {
+  display: flex;
+  justify-content: space-between;
+}
+  
+.statistic-item p {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.statistics-total , .statistics-frequency{
+  margin-top: 15px;
+}
+  
+  
