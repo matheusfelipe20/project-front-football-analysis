@@ -2,16 +2,42 @@
     position: relative;
 }
 
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding-left: 35px;
+    width: 220px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    width: 18px;
+    pointer-events: none;
+}
+
+.search-input::placeholder {
+    padding-left: 5px;
+}
+
 .search-dropdown {
     position: absolute;
-    top: 100%;
+    top: 115%;
     left: 0;
     width: 100%;
     max-height: 200px;
     overflow-y: auto;
     background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
     list-style: none;
@@ -26,5 +52,49 @@
 }
 
 .dropdown-item:hover {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
+}
+
+.search-dropdown .dropdown-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+
+.team-image {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.team-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-name {
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.team-country {
+    display: flex;
+    align-items: center;
+}
+
+.league-country {
+    font-size: 0.7rem;
+    color: #22222673;
+    display: flex;
+    font-weight: 500;
+}
+
+.country-flag {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
 }

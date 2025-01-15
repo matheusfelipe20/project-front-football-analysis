@@ -1,3 +1,10 @@
 :root {
+    --color-primary: #fec300;
+
     --background-primary: #ffffff;
+
+    --background-header-top: #fec300;
+    --background-header-down: #d1a000;
+
+    --effect-elevation: rgba(34, 34, 38, 0.301);
 }

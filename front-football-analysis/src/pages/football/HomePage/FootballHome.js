@@ -1,8 +1,8 @@
 import React from "react";
 import Intro from "./intro/intro";
 
-const Home = () => (
+const FootballHome = () => (
     <Intro />
 );
 
-export default Home;
+export default FootballHome;
