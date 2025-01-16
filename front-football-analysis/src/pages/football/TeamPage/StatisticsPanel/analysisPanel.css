@@ -1,3 +1,7 @@
+.statistics-loading {
+  text-align: center;
+}
+
 .panel-statistic {
   background-color: #f8f8f8;
   padding: 15px;
@@ -10,31 +14,54 @@
   font-size: 18px;
   font-weight: 500;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
   
 .statistics-tabs {
   display: flex;
-  margin-bottom: 15px;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 10px;
 }
-  
-.statistics-tabs button {
-  background-color: #e0e0e0;
-  color: #979797;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+
+.toggle-container {
+  width: 100px;
+  height: 30px;
+  background-color: var(--background-button-statics-toggle);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
   cursor: pointer;
 }
-  
-.statistics-tabs button:hover {
-  background-color: var(--background-button-statics-out);
-  color: #fff;
+
+.toggle-slider {
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
 }
-  
-.statistics-tabs .active {
+
+.toggle-slider.home {
+  left: 0;
   background-color: var(--background-button-statics-home);
-  color: #fff;
+  color: #000000;
+}
+
+.toggle-slider.away {
+  left: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 40px;
 }
   
 .statistics-summary {
@@ -45,7 +72,7 @@
 .statistics-summary h2 {
   margin: 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
   
 .statistic-item {
@@ -60,7 +87,12 @@
 }
 
 .statistics-total , .statistics-frequency{
-  margin-top: 15px;
+  margin-top: 5px;
+}
+
+.statistic-divider {
+  display: flex;
+  justify-content: center;
 }
   
   

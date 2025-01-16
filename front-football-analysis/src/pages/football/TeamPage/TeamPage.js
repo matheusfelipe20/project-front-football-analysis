@@ -7,6 +7,9 @@ import './teamPage.css'
 import iconFootball from "../../../assets/icons/icon-football.svg";
 import countries from "../../../assets/icons/country/countries.json";
 import AnalysisPanel from "./StatisticsPanel/analysisPanel";
+import GraphPanel from "./StatisticsGraph/staticGraph";
+import Divider from "../../../components/divider/divider";
+import InfoCrud from "./CrudTeamInfo/InfoCrud";
 
 const TeamPage = () => {
   const { teamId } = useParams();
@@ -73,14 +76,26 @@ const TeamPage = () => {
           </div>
         </div>
         <div className="information-conteiner">
-          <img src={team.imageUrl} alt={team.name} className="information-team-image" />
-          <div className="information-team-info">
-            <h1 className="information-team-name">{team.name}</h1>
-            <span className="information-team-leagueName">Liga: {leagueDetails.name}</span>
+          <div className="information-container-left">
+            <img src={team.imageUrl} alt={team.name} className="information-team-image" />
+            <div className="information-team-info">
+              <h1 className="information-team-name">{team.name}</h1>
+              <Divider width="100%" color="#c5c5c5" height={'1px'} margin={'0px'} />
+              <span className="information-team-leagueName">{leagueDetails.name}</span>
+              <span className="information-team-leagueDivision">{leagueDetails.division}</span>
+            </div>
+          </div>
+          <div className="information-container-right">
+            <img src={leagueDetails.imageUrl} alt={leagueDetails.name} className="information-league-image" />
           </div>
         </div>
+        <div className="information-divider">
+          <Divider width="3%" color="#77715b" height={'2px'} margin={'14px'} />
+        </div>
+        <InfoCrud teamId={teamId}/>
       </div>
       <div className="panel-analysis">
+        <GraphPanel teamId={teamId} />
         <AnalysisPanel teamId={teamId}/>
       </div>
     </div>

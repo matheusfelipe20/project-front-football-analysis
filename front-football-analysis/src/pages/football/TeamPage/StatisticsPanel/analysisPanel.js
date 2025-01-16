@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import './analysisPanel.css';
+import Divider from '../../../../components/divider/divider';
 
 const AnalysisPanel = ({ teamId }) => {
   const [selectedTab, setSelectedTab] = useState('home');
@@ -93,25 +94,24 @@ const AnalysisPanel = ({ teamId }) => {
 
   const evaluateFrequency = (values) => {
     const recentValues = values.slice(-5);
-
+  
     if (recentValues.length <= 1) {
-      return { label: 'N/A', color: 'gray' }; //Caso haja 1 ou menos valores, não pode avaliar
+      return { label: 'N/A', color: 'gray' };
     }
-
-    const mean = recentValues.reduce((sum, value) => sum + value, 0) / recentValues.length;
-    const variance = recentValues.reduce((sum, value) => sum + Math.pow(value - mean, 2), 0) / recentValues.length;
-    const standardDeviation = Math.sqrt(variance);
-
-    const threshold = mean * 0.5;
-
-    if (standardDeviation <= threshold) {
-      return { label: 'Constante', color: 'green' };
-    } else if (standardDeviation > threshold && standardDeviation <= threshold * 2) {
-      return { label: 'Oscilando', color: 'orange' }; 
+  
+    const differences = recentValues.slice(1).map((value, index) => Math.abs(value - recentValues[index]));
+  
+    const meanDifference = differences.reduce((sum, diff) => sum + diff, 0) / differences.length;
+  
+    const threshold = 2.2;
+  
+    if (meanDifference <= threshold) {
+      return { label: 'Consistente', color: 'green' };
     } else {
-      return { label: 'Inconstante', color: 'red' };
+      return { label: 'Oscilando', color: 'orange' };
     }
   };
+  
 
   const updateStatistics = useCallback(async () => {
     setLoading(true);
@@ -180,24 +180,18 @@ const AnalysisPanel = ({ teamId }) => {
     <div className="panel-statistic">
       <p>Estatísticas do time</p>
       <div className="statistics-tabs">
-        <button
-          className={selectedTab === 'home' ? 'active' : ''}
-          onClick={() => setSelectedTab('home')}
-        >
-          Casa
-        </button>
-        <button
-          className={selectedTab === 'away' ? 'active' : ''}
-          onClick={() => setSelectedTab('away')}
-        >
-          Fora
-        </button>
+        <div className="toggle-container" onClick={() => setSelectedTab(selectedTab === 'home' ? 'away' : 'home')}>
+          <div className={`toggle-slider ${selectedTab === 'home' ? 'home' : 'away'}`}>
+            <span>{selectedTab === 'home' ? 'Casa' : 'Fora'}</span>
+          </div>
+        </div>
       </div>
 
       {loading ? (
-        <p>Carregando...</p>
+        <p className="statistics-loading">Carregando...</p>
       ) : (
         <div className="statistics-summary">
+          <div className="statistic-divider"> <Divider width='100%' color='#D7D7D7' height={'1px'} margin={'0px 0px 5px 0px'}/> </div>
           <div className="statistics-average">
             <h2>Médias</h2>
             <div className="statistic-item">
@@ -213,35 +207,35 @@ const AnalysisPanel = ({ teamId }) => {
               <p>{averages[selectedTab]?.cards ?? 'N/A'}</p>
             </div>
           </div>
-
+          <div className="statistic-divider"> <Divider width='60%' color='#D7D7D7' height={'1px'} margin={'10px 0px 0px 0px'}/> </div>
           <div className="statistics-frequency">
             <h2>Frequência</h2>
             <div className="statistic-item">
               <p>Gols</p>
-              <p
-                style={{ color: frequencies[selectedTab]?.goals.color }}
+              <p className="statistic-freq"
+                style={{ color: frequencies[selectedTab]?.goals.color, fontSize: '0.9rem' }}
               >
                 {frequencies[selectedTab]?.goals.label}
               </p>
             </div>
             <div className="statistic-item">
               <p>Escanteios</p>
-              <p
-                style={{ color: frequencies[selectedTab]?.corners.color }}
+              <p className="statistic-freq"
+                style={{ color: frequencies[selectedTab]?.corners.color, fontSize: '0.9rem' }}
               >
                 {frequencies[selectedTab]?.corners.label}
               </p>
             </div>
             <div className="statistic-item">
               <p>Cartões</p>
-              <p
-                style={{ color: frequencies[selectedTab]?.cards.color }}
+              <p className="statistic-freq"
+                style={{ color: frequencies[selectedTab]?.cards.color, fontSize: '0.9rem' }}
               >
                 {frequencies[selectedTab]?.cards.label}
               </p>
             </div>
           </div>
-
+          <div className="statistic-divider"> <Divider width='60%' color='#D7D7D7' height={'1px'} margin={'10px 0px 0px 0px'}/> </div>
           <div className="statistics-total">
             <h2>Total</h2>
             <div className="statistic-item">
