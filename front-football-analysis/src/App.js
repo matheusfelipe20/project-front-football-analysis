@@ -1,24 +1,29 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Header from './components/header/Header';
-import TeamPage from './pages/football/TeamPage/TeamPage';
-import FootballHome from './pages/football/HomePage/FootballHome';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/header/Header";
+import TeamPage from "./pages/football/TeamPage/TeamPage";
+import FootballHome from "./pages/football/HomePage/FootballHome";
+import Login from "./pages/football/LoginPage/Login";
 
 function App() {
+  const [token, setToken] = useState(localStorage.getItem("authToken"));
+
   return (
     <Router basename="/project-front-football-analysis">
-      <MainContent />
+      <MainContent token={token} setToken={setToken} />
     </Router>
   );
 }
 
-function MainContent() {
+function MainContent({ token, setToken }) {
   return (
     <div className="App">
-      <Header />
+      <Header token={token} setToken={setToken} />
       <Routes>
+        <Route path="/login" element={<Login setToken={setToken} />} />
         <Route path="/football" element={<FootballHome />} />
-        <Route path="/football/team/:teamId" element={<TeamPage />} /> {/* Corrigido para :teamId */}
+        <Route path="/football/team/:teamId" element={<TeamPage />} />
       </Routes>
     </div>
   );

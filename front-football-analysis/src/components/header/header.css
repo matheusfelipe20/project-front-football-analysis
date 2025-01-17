@@ -185,3 +185,36 @@
 .close-button:hover {
     color: #f1f1f1;
 }
+
+.option-login-menu {
+    display: flex;
+    align-items: center;
+}
+
+.login-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #e7e7e7;
+}
+
+.exit-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.exit-button:hover {
+    background-color: #e7e7e7;
+}
