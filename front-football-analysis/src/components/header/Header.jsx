@@ -4,43 +4,19 @@ import "../../variables/Colors.css";
 import imgHeader from "../../assets/logo-header.png";
 import { Link, useNavigate } from "react-router-dom";
 import HeaderSearch from "./headerSearch/HeaderSearch";
-import axios from "axios";
 import Tabs from "../tabs/Tabs";
 import iconSuccess from "../../assets/icons/icon-success.svg";
 import iconError from "../../assets/icons/icon-error.svg";
 
 const Header = ({ token, setToken }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [apiStatus, setApiStatus] = useState("");
   const [timeoutId, setTimeoutId] = useState(null);
-  const [iconState, setIconState] = useState(true);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
-    setToken(null); // Atualiza o estado global
+    setToken(null);
     navigate("/");
-  };
-
-  const handleActivateApi = async () => {
-    setIsLoading(true);
-    try {
-      const response = await axios.get(
-        "https://project-football-analysis-1.onrender.com/football/league"
-      );
-
-      if (response.status === 200) {
-        setApiStatus({ type: "success", message: "API Ligada" });
-      } else {
-        setApiStatus({ type: "error", message: "Erro ao ativar API" });
-      }
-    } catch (error) {
-      setApiStatus({ type: "error", message: "Erro ao ativar API" });
-      console.error("Erro ao ativar a API", error);
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   const handleCloseApiStatus = () => {
@@ -63,23 +39,27 @@ const Header = ({ token, setToken }) => {
     }
   }, [apiStatus]);
 
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-    setIconState(!iconState);
-  };
-
   return (
     <header>
       <div className="header">
         <div className="header-top">
           <div className="header-logo">
-            <Link to="/">
+            <Link to="/football">
               <img className="logo" src={imgHeader} alt="Logo MatthScore" />
               <p className="logo-name">MatthScore</p>
             </Link>
           </div>
           <div className="header-search">
             <HeaderSearch />
+          </div>
+          <div className="option-login-menu">
+            {token ? (
+                <button onClick={handleLogout} className="exit-button">Sair</button>
+              ) : (
+              <Link to="/login">
+                <button className="login-button">Login</button>
+              </Link>
+            )}
           </div>
         </div>
         <div className="header-down">
@@ -90,45 +70,12 @@ const Header = ({ token, setToken }) => {
                   <div>
                     <Tabs />
                   </div>
-                  <div className="option-login-menu">
-                    {token ? (
-                      <button onClick={handleLogout} className="exit-button">Sair</button>
-                    ) : (
-                      <Link to="/login">
-                        <button className="login-button">Login</button>
-                      </Link>
-                    )}
-                    <button
-                      className="nav-options"
-                      onClick={handleDropdownToggle}
-                    >
-                      <span
-                        className={`nav-icon-config ${
-                          iconState ? "plus" : "minus"
-                        }`}
-                      >
-                        {iconState ? "☰" : "✖"}
-                      </span>
-                      {isDropdownOpen && (
-                        <div className="dropdown-menu">
-                          <button onClick={handleActivateApi}>Ativar API</button>
-                        </div>
-                      )}
-                    </button>
-                  </div>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
-
-      {/* Animação de loading */}
-      {isLoading && (
-        <div className="loading-overlay">
-          <div className="loading-spinner"></div>
-        </div>
-      )}
 
       {/* Mensagem de sucesso ou erro com ícones e botão de fechar */}
       {apiStatus && (

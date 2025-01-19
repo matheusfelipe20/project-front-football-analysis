@@ -3,6 +3,7 @@
 }
 
 .panel-statistic {
+  width: 30%;
   background-color: #f8f8f8;
   padding: 15px;
   border-radius: 16px;
@@ -15,6 +16,7 @@
   font-weight: 500;
   margin-top: 5px;
   margin-bottom: 10px;
+  text-align: center;
 }
   
 .statistics-tabs {
@@ -94,5 +96,17 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 1000px) {
+  .panel-statistic {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .panel-statistic {
+    width: auto;
+  }
+}
   
-  
+

@@ -55,6 +55,14 @@ const TeamPage = () => {
     (key) => countries[key] === leagueDetails.country
   );
 
+  function abbreviateTeamName(name) {
+    const words = name.split(' ');
+    
+    return words
+      .map((word, index) => (index === 0 ? word : `${word.charAt(0)}.`))
+      .join(' ');
+  }
+
   // Usando require para carregar dinamicamente a bandeira
   const flagSrc = countryCode
     ? require(`../../../assets/icons/country/${countryCode.toLowerCase()}.svg`)
@@ -94,9 +102,9 @@ const TeamPage = () => {
               className="information-team-image"
             />
             <div className="information-team-info">
-              <h1 className="information-team-name">{team.name}</h1>
+              <h1 className="information-team-name">{abbreviateTeamName(team.name)}</h1>
               <Divider
-                width="100%"
+                width="90%"
                 color="#c5c5c5"
                 height={"1px"}
                 margin={"0px"}
@@ -109,13 +117,11 @@ const TeamPage = () => {
               </span>
             </div>
           </div>
-          <div className="information-container-right">
-            <img
+          <img
               src={leagueDetails.imageUrl}
               alt={leagueDetails.name}
               className="information-league-image"
             />
-          </div>
         </div>
         <div className="information-divider">
           <Divider width="3%" color="#77715b" height={"2px"} margin={"14px"} />

@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
 import TeamPage from "./pages/football/TeamPage/TeamPage";
-import FootballHome from "./pages/football/HomePage/FootballHome";
 import Login from "./pages/football/LoginPage/Login";
+import FootballHome from "./pages/football/FootballPage/FootballHome";
+import LeaguePage from "./pages/football/LeaguePage/LeaguePage";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("authToken"));
@@ -24,6 +25,7 @@ function MainContent({ token, setToken }) {
         <Route path="/login" element={<Login setToken={setToken} />} />
         <Route path="/football" element={<FootballHome />} />
         <Route path="/football/team/:teamId" element={<TeamPage />} />
+        <Route path="football/league/:leagueId" element={<LeaguePage />} />
       </Routes>
     </div>
   );

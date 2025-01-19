@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import axios from "axios";
 
 const Login = ({ setToken }) => {
+  useEffect(() => {
+    document.body.classList.add('login-body');
+
+    return () => {
+      document.body.classList.remove('login-body');
+    };
+  }, []);
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -25,6 +33,7 @@ const Login = ({ setToken }) => {
   };
 
   return (
+      <div className="login-body">
         <div className="login-container">
             <form className="login-form" onSubmit={handleLogin}>
                 <h2>Login</h2>
@@ -52,6 +61,7 @@ const Login = ({ setToken }) => {
                 <button type="submit">Entrar</button>
             </form>
         </div>
+      </div>
     );
 };
 

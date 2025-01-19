@@ -1,0 +1,170 @@
+.league-page {
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.league-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #292722;
+    margin-top: 15px;
+}
+
+.league-image {
+    width: 8%;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.league-details {
+    margin-left: 20px;
+}
+
+.league-name {
+    font-size: 1.8rem;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.league-division {
+    margin-top: 0px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.league-country-panel {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.league-country-flag {
+    width: 35px;
+    margin-right: 5px;
+}
+
+.league-country-name {
+    font-size: 1rem;
+    margin: 0px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.league-teams-section {
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: #e0e0e0 solid 1.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.league-teams-header {
+    display: flex;
+    align-items: center;
+    border-bottom: #292722 1px solid;
+    margin-top: 10px;
+}
+
+.league-teams-header > h2{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin: 0px;
+    color: #292722;
+}
+
+.league-teams-header > p{
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin: 0px;
+    color: #a1a1a1;
+    margin-left: 10px;
+}
+  
+.league-teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 10px;
+}
+
+.league-teams-grid > a {
+    text-decoration: none;
+    color: #292722;
+    font-weight: 500;
+}
+
+.league-teams-grid > a:hover{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    background-color: #292722;
+    border-radius: 8px;
+}
+  
+.league-team-card {
+    display: flex;
+    height: 140px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.league-team-card-image {
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    object-position: center;
+}
+  
+.league-team-card-name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+
+    .league-teams-header > h2{
+        font-size: 0.9rem;
+    }
+    
+    .league-teams-header > p{
+        font-size: 0.6rem;
+    }
+
+    .league-country-flag {
+        width: 20px;
+    }
+    
+    .league-country-name {
+        font-size: 0.6rem;
+    }
+
+    .league-image {
+        width: 16%;
+    }
+    
+    .league-details {
+        margin-left: 20px;
+    }
+    
+    .league-name {
+        font-size: 1.3rem;
+    }
+    
+    .league-division {
+        font-size: 0.7rem;
+    }
+}
