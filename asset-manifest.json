@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/project-front-football-analysis/static/css/main.66e9fcea.css",
-    "main.js": "/project-front-football-analysis/static/js/main.0f667537.js",
+    "main.css": "/project-front-football-analysis/static/css/main.bd7b4c23.css",
+    "main.js": "/project-front-football-analysis/static/js/main.3017f644.js",
     "static/js/488.afde171c.chunk.js": "/project-front-football-analysis/static/js/488.afde171c.chunk.js",
     "static/media/mp.svg": "/project-front-football-analysis/static/media/mp.0c771c14213d9536f2e8.svg",
     "static/media/sv.svg": "/project-front-football-analysis/static/media/sv.1dfe9aaa83a48b8b6d48.svg",
+    "static/media/football-2.png": "/project-front-football-analysis/static/media/football-2.7f3fb1375e199605652c.png",
     "static/media/bo.svg": "/project-front-football-analysis/static/media/bo.1fa4252f4b2b25586895.svg",
+    "static/media/football-3.png": "/project-front-football-analysis/static/media/football-3.a0b7e3f415e52bf114f9.png",
+    "static/media/football-1.png": "/project-front-football-analysis/static/media/football-1.085826cbad03e4c50119.png",
     "static/media/af.svg": "/project-front-football-analysis/static/media/af.4746d62dd209267466a8.svg",
     "static/media/ec.svg": "/project-front-football-analysis/static/media/ec.ae28d58e2a276ff03ab9.svg",
     "static/media/mx.svg": "/project-front-football-analysis/static/media/mx.7a366c4de841361fe95c.svg",
@@ -264,12 +267,12 @@
     "static/media/mc.svg": "/project-front-football-analysis/static/media/mc.3a3d3636390c09c64d3e.svg",
     "static/media/ua.svg": "/project-front-football-analysis/static/media/ua.f8cca1b6202785b4fb56.svg",
     "static/media/id.svg": "/project-front-football-analysis/static/media/id.ffa58d55dd7e95dd504d.svg",
-    "main.66e9fcea.css.map": "/project-front-football-analysis/static/css/main.66e9fcea.css.map",
-    "main.0f667537.js.map": "/project-front-football-analysis/static/js/main.0f667537.js.map",
+    "main.bd7b4c23.css.map": "/project-front-football-analysis/static/css/main.bd7b4c23.css.map",
+    "main.3017f644.js.map": "/project-front-football-analysis/static/js/main.3017f644.js.map",
     "488.afde171c.chunk.js.map": "/project-front-football-analysis/static/js/488.afde171c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.66e9fcea.css",
-    "static/js/main.0f667537.js"
+    "static/css/main.bd7b4c23.css",
+    "static/js/main.3017f644.js"
   ]
 }
