@@ -70,8 +70,8 @@
     background-color: #77715b;
     padding: 15px;
     border-radius: 16px;
-    border: #e0e0e0 solid 1.5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: var(--border-panel-default);
+    box-shadow: var(--shadow-panel-default);
     margin-top: 10px;
     height: 120px;
     width: 450px;

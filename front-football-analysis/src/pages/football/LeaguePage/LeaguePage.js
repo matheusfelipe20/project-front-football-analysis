@@ -56,7 +56,7 @@ const LeaguePage = () => {
         <div className="league-details">
           <h1 className="league-name">{leagueDetails.name}</h1>
           <p className="league-division">{leagueDetails.division} | Futebol</p>
-          <Divider margin={'0px'} height={'1px'} color="#e0e0e0" width="100%"/>
+          <Divider margin={'0px'} height={'1px'} color="var(--color-divider-panel-League)" width="100%"/>
           <div className="league-country-panel">
             {flagSrc && (
               <img src={flagSrc} alt={`${leagueDetails.country} flag`} className="league-country-flag"/>

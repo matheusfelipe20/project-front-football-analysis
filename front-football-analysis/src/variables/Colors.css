@@ -1,15 +1,32 @@
 :root {
+    /* Body System */
     --color-primary: #fec300;
-    ---background-favorite: #e1eefd;
+    --background-primary: #e9f3ff;
 
-    --background-primary: #ffffff;
-
+    /* Header Component */
     --background-header-top: #fec300;
     --background-header-down: #d1a000;
+    --effect-elevation: rgba(34, 34, 38, 0.301);
 
+    /* Statics Component */
     --background-button-statics-home: #fec300;
     --background-button-statics-out: #000;
     --background-button-statics-toggle: #dadada;
 
-    --effect-elevation: rgba(34, 34, 38, 0.301);
+    /* Element Default Panel */
+    --background-panel-default: #fff;
+    --shadow-panel-default: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-panel-default: #e0e0e0 solid 1.5px;
+
+    /* Page Login */
+    --background-panel-Login: #ccccccb0;
+    --background-button-Login: #008cff;
+    --background-button-Login-hover: #0077d8;
+    --colorFont-button-Login: #fff;
+
+    /* Page League */
+    --background-panel-League: #292722;
+    --background-image-League: #fff;
+    --colorFont-panel-League: #fff;
+    --color-divider-panel-League: #5a5a5a;
 }

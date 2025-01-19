@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import './ChampionshipsRanking.css';
-import Divider from '../../../../components/divider/divider'
+import "./ChampionshipsRanking.css";
+import Divider from "../../../../components/divider/divider";
+import "../../../../variables/Colors.css"
 
 const ChampionshipsRanking = () => {
   const [leagues, setLeagues] = useState([]);

@@ -3,8 +3,8 @@
     padding: 10px 15px;
     width: 200px;
     border-radius: 18px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-panel-default);
+    box-shadow: var(--shadow-panel-default);
 }
 
 .championships-ranking > h2 {

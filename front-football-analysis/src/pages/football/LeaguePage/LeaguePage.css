@@ -6,21 +6,21 @@
 
 .league-info {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
     padding: 15px 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #292722;
+    box-shadow: var(--shadow-panel-default);
+    background-color: var(--background-panel-League);
     margin-top: 15px;
 }
 
 .league-image {
-    width: 8%;
+    width: 120px;
     padding: 5px 10px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--background-image-League);
 }
 
 .league-details {
@@ -31,12 +31,12 @@
     font-size: 1.8rem;
     margin-top: 0px;
     margin-bottom: 5px;
-    color: #fff;
+    color: var(--colorFont-panel-League);
 }
 
 .league-division {
     margin-top: 0px;
-    color: #fff;
+    color: var(--colorFont-panel-League);
     font-weight: 400;
     margin-bottom: 5px;
 }
@@ -55,16 +55,16 @@
 .league-country-name {
     font-size: 1rem;
     margin: 0px;
-    color: #fff;
+    color: var(--colorFont-panel-League);
     font-weight: 500;
 }
 
 .league-teams-section {
-    background-color: #f8f8f8;
+    background-color: var(--background-panel-default);
     padding: 15px 20px;
     border-radius: 12px;
-    border: #e0e0e0 solid 1.5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: var(--border-panel-default);
+    box-shadow: var(--shadow-panel-default);
     margin-top: 15px;
 }
 
@@ -99,15 +99,15 @@
 
 .league-teams-grid > a {
     text-decoration: none;
-    color: #292722;
+    color: var(--background-panel-League);
     font-weight: 500;
 }
 
 .league-teams-grid > a:hover{
     text-decoration: none;
-    color: #fff;
+    color: var(--colorFont-panel-League);
     font-weight: 500;
-    background-color: #292722;
+    background-color: var(--background-panel-League);
     border-radius: 8px;
 }
   
