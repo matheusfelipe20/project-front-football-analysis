@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/project-front-football-analysis/static/css/main.63200f43.css",
-    "main.js": "/project-front-football-analysis/static/js/main.83ed8af9.js",
+    "main.css": "/project-front-football-analysis/static/css/main.e137bd04.css",
+    "main.js": "/project-front-football-analysis/static/js/main.e698fde9.js",
     "static/js/488.afde171c.chunk.js": "/project-front-football-analysis/static/js/488.afde171c.chunk.js",
     "static/media/mp.svg": "/project-front-football-analysis/static/media/mp.0c771c14213d9536f2e8.svg",
     "static/media/sv.svg": "/project-front-football-analysis/static/media/sv.1dfe9aaa83a48b8b6d48.svg",
@@ -81,6 +81,7 @@
     "static/media/cx.svg": "/project-front-football-analysis/static/media/cx.d1447c4301e8093c812d.svg",
     "static/media/ki.svg": "/project-front-football-analysis/static/media/ki.23a93c2f0d1a4fd5156a.svg",
     "static/media/ug.svg": "/project-front-football-analysis/static/media/ug.1e3694d56cb88d944a3a.svg",
+    "static/media/icon-settings.svg": "/project-front-football-analysis/static/media/icon-settings.10c1f5ed13ba0a59c9933d2f124a46a6.svg",
     "static/media/ai.svg": "/project-front-football-analysis/static/media/ai.3f9a92a4b04ab4192abb.svg",
     "static/media/vu.svg": "/project-front-football-analysis/static/media/vu.f04f6853b217c2e83c17.svg",
     "static/media/si.svg": "/project-front-football-analysis/static/media/si.e3a3f13c9126a37e82a4.svg",
@@ -100,6 +101,7 @@
     "static/media/au.svg": "/project-front-football-analysis/static/media/au.5b393cb44bf865d6a1c1.svg",
     "static/media/hm.svg": "/project-front-football-analysis/static/media/hm.5b393cb44bf865d6a1c1.svg",
     "static/media/ke.svg": "/project-front-football-analysis/static/media/ke.7a93d3a68644b436c0b1.svg",
+    "static/media/login-background.svg": "/project-front-football-analysis/static/media/login-background.6f1ed711dd5fc31221a4.svg",
     "static/media/tv.svg": "/project-front-football-analysis/static/media/tv.2552574747183307bace.svg",
     "static/media/tk.svg": "/project-front-football-analysis/static/media/tk.c63f020aba76749ab297.svg",
     "static/media/ck.svg": "/project-front-football-analysis/static/media/ck.86db267867d61c9184da.svg",
@@ -115,7 +117,6 @@
     "static/media/sb.svg": "/project-front-football-analysis/static/media/sb.8062ca0518b3fae743ab.svg",
     "static/media/kn.svg": "/project-front-football-analysis/static/media/kn.77f64db8b1ff2d443bcc.svg",
     "static/media/mw.svg": "/project-front-football-analysis/static/media/mw.33e950c65f58447f1b81.svg",
-    "static/media/login-background.svg": "/project-front-football-analysis/static/media/login-background.c05cd89f4c47d7526075.svg",
     "static/media/ve.svg": "/project-front-football-analysis/static/media/ve.e644e482375c60d87c54.svg",
     "index.html": "/project-front-football-analysis/index.html",
     "static/media/bb.svg": "/project-front-football-analysis/static/media/bb.f1866cb581c9eed0ade4.svg",
@@ -268,12 +269,12 @@
     "static/media/mc.svg": "/project-front-football-analysis/static/media/mc.3a3d3636390c09c64d3e.svg",
     "static/media/ua.svg": "/project-front-football-analysis/static/media/ua.f8cca1b6202785b4fb56.svg",
     "static/media/id.svg": "/project-front-football-analysis/static/media/id.ffa58d55dd7e95dd504d.svg",
-    "main.63200f43.css.map": "/project-front-football-analysis/static/css/main.63200f43.css.map",
-    "main.83ed8af9.js.map": "/project-front-football-analysis/static/js/main.83ed8af9.js.map",
+    "main.e137bd04.css.map": "/project-front-football-analysis/static/css/main.e137bd04.css.map",
+    "main.e698fde9.js.map": "/project-front-football-analysis/static/js/main.e698fde9.js.map",
     "488.afde171c.chunk.js.map": "/project-front-football-analysis/static/js/488.afde171c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63200f43.css",
-    "static/js/main.83ed8af9.js"
+    "static/css/main.e137bd04.css",
+    "static/js/main.e698fde9.js"
   ]
 }
