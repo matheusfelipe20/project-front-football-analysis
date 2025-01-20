@@ -1,0 +1,88 @@
+.champion-panelCountry {
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 18px;
+  background-color: var(--background-panel-default);
+  box-shadow: var(--shadow-panel-default);
+  margin-left: 20px;
+}
+
+.champion-panelCountry > h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+}
+  
+.champion-panelCountry-panel {
+  text-align: center;
+  background-color: var(--background-panel-default);
+}
+  
+.champion-panelCountry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 7.5px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+  
+.champion-panelCountry-flag {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.champion-panelCountry-element {
+  display: flex;
+  align-items: center;
+}
+  
+.champion-panelCountry-name {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0px;
+  margin-left: 10px;
+}
+  
+.panelCountry-toggle-icon {
+  font-size: 1rem;
+  color: #b6b6b6;
+}
+  
+.panelCountry-leagues-list {
+  padding: 5px 7.5px;
+  display: flex;
+  flex-direction: column;
+}
+  
+.panelCountry-league-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  transition: background-color 0.3s;
+  border-bottom: #ddd solid 1px;
+}
+  
+.panelCountry-league-item:hover {
+  background-color: #eee;
+}
+  
+.panelCountry-league-image {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+  
+.panelCountry-league-name {
+  margin: 0px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
