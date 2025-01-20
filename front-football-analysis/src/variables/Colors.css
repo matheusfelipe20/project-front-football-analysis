@@ -3,13 +3,16 @@
     --color-primary: #fec300;
     --background-primary: #e9f3ff;
 
+    /* Carousel Component */
+    --background-carouselImage: #000;
+
     /* Header Component */
-    --background-header-top: #fec300;
-    --background-header-down: #d1a000;
+    --background-header-top: #111517;
+    --background-header-down: rgba(143, 143, 143, 0.322);
     --effect-elevation: rgba(34, 34, 38, 0.301);
 
     /* Statics Component */
-    --background-button-statics-home: #fec300;
+    --background-button-statics-home: #65db32;
     --background-button-statics-out: #000;
     --background-button-statics-toggle: #dadada;
 

@@ -2,13 +2,20 @@
     background-color: var(--background-header-top);
 }
 
-.header-top {
+.header-top-contain {
     background-color: var(--background-header-top);
     padding: 20px 20px 10px 20px;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+
+.header-top {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
 }
 
 .header-top a {
@@ -18,8 +25,9 @@
 }
 
 .logo {
-    width: 50px;
+    width: 150px;
     height: 50px;
+    object-fit: contain;
 }
 
 .logo-name {
@@ -37,13 +45,34 @@
 
 .nav-links li {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .nav-links {
     list-style: none;
     padding: 5px 20px;
     margin: 0;
+}
+
+.nav-links-contain {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-button-iconSettings {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button-iconSettings:hover {
+    background-color: #5a5a5a;
+}
+
+.nav-image-iconSettings {
+    width: 25px;
+    object-fit: contain;
 }
 
 .nav-options {
@@ -66,17 +95,17 @@
     font-weight: bold;
     display: inline-block;
     transition: transform 0.3s ease, color 0.3s ease;
-  }
+}
   
-  .nav-icon-config.plus {
+.nav-icon-config.plus {
     transform: rotate(0deg);
     color: #ffffff;
-  }
+}
   
-  .nav-icon-config.minus {
+.nav-icon-config.minus {
     transform: rotate(180deg);
     color: #ffffff;
-  }
+}
 
 .nav-name {
     margin: 0;
@@ -222,13 +251,33 @@
     }
 
     .logo {
-        width: 25px;
-        height: 25px;
+        width: 100px;
+        height: 35px;
     }
 
     .login-button, .exit-button{
         width: 55px;
         height: 30px;
         font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 980px) {
+    .header-top {
+        width: 980px;
+    }
+
+    .nav-links-contain {
+        width: 980px;
+    }
+}
+
+@media (min-width: 1343px) {
+    .header-top {
+        width: 1343px;
+    }
+
+    .nav-links-contain {
+        width: 1343px;
     }
 }

@@ -1,3 +1,26 @@
 .body-footballHome {
     display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.element-championCountry {
+    padding: 10px 20px;
+}
+
+.element-mid {
+    padding: 10px 20px;
+    background-color: aqua;
+    width: auto;
+}
+
+.element-championRanking {
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+
+    .body-footballHome {
+        flex-direction: column;
+    }
 }

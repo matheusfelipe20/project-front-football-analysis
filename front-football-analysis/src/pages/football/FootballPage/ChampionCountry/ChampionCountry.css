@@ -4,7 +4,6 @@
   border-radius: 18px;
   background-color: var(--background-panel-default);
   box-shadow: var(--shadow-panel-default);
-  margin-left: 20px;
 }
 
 .champion-panelCountry > h2 {

@@ -6,6 +6,7 @@ import TeamPage from "./pages/football/TeamPage/TeamPage";
 import Login from "./pages/football/LoginPage/Login";
 import FootballHome from "./pages/football/FootballPage/FootballHome";
 import LeaguePage from "./pages/football/LeaguePage/LeaguePage";
+import HomePage from "./pages/football/HomePage/HomePage";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("authToken"));
@@ -24,6 +25,7 @@ function MainContent({ token, setToken }) {
       <Routes>
         <Route path="/login" element={<Login setToken={setToken} />} />
         <Route path="/football" element={<FootballHome />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/football/team/:teamId" element={<TeamPage />} />
         <Route path="football/league/:leagueId" element={<LeaguePage />} />
       </Routes>

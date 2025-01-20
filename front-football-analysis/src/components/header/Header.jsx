@@ -7,6 +7,7 @@ import HeaderSearch from "./headerSearch/HeaderSearch";
 import Tabs from "../tabs/Tabs";
 import iconSuccess from "../../assets/icons/icon-success.svg";
 import iconError from "../../assets/icons/icon-error.svg";
+import iconSettings from "../../assets/icons/icon-settings.svg";
 
 const Header = ({ token, setToken }) => {
   const [apiStatus, setApiStatus] = useState("");
@@ -42,24 +43,25 @@ const Header = ({ token, setToken }) => {
   return (
     <header>
       <div className="header">
-        <div className="header-top">
-          <div className="header-logo">
-            <Link to="/football">
-              <img className="logo" src={imgHeader} alt="Logo MatthScore" />
-              <p className="logo-name">MatthScore</p>
-            </Link>
-          </div>
-          <div className="header-search">
-            <HeaderSearch />
-          </div>
-          <div className="option-login-menu">
-            {token ? (
-                <button onClick={handleLogout} className="exit-button">Sair</button>
-              ) : (
-              <Link to="/login">
-                <button className="login-button">Login</button>
+        <div className="header-top-contain">
+          <div className="header-top">
+            <div className="header-logo">
+              <Link to="/football">
+                <img className="logo" src={imgHeader} alt="Logo MatthScore" />
               </Link>
-            )}
+            </div>
+            <div className="header-search">
+              <HeaderSearch />
+            </div>
+            <div className="option-login-menu">
+              {token ? (
+                  <button onClick={handleLogout} className="exit-button">Sair</button>
+                ) : (
+                <Link to="/login">
+                  <button className="login-button">Login</button>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
         <div className="header-down">
@@ -67,8 +69,11 @@ const Header = ({ token, setToken }) => {
             <nav>
               <ul className="nav-links">
                 <li>
-                  <div>
+                  <div className="nav-links-contain">
                     <Tabs />
+                    <button className="nav-button-iconSettings">
+                      <img className="nav-image-iconSettings" src={iconSettings} alt="icone Configuração" />
+                    </button>
                   </div>
                 </li>
               </ul>
