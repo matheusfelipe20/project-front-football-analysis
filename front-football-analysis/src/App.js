@@ -27,7 +27,7 @@ function MainContent({ token, setToken }) {
         <Route path="/football" element={<FootballHome />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/football/team/:teamId" element={<TeamPage />} />
-        <Route path="football/league/:leagueId" element={<LeaguePage />} />
+        <Route path="/football/league/:leagueId" element={<LeaguePage />} />
       </Routes>
     </div>
   );
