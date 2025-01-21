@@ -64,7 +64,7 @@ const ChampionCountry = () => {
               {leagues.map((league) => (
                 <a
                   key={league.id}
-                  href={`/leagues/${league.id}`}
+                  href={`football/league/${league.id}`}
                   className="panelCountry-league-item"
                 >
                   <img
