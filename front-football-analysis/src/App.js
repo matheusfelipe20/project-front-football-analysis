@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header/Header";
 import TeamPage from "./pages/football/TeamPage/TeamPage";
@@ -23,6 +23,7 @@ function MainContent({ token, setToken }) {
     <div className="App">
       <Header token={token} setToken={setToken} />
       <Routes>
+        <Route path="/" element={<Navigate to="/football" />} />
         <Route path="/login" element={<Login setToken={setToken} />} />
         <Route path="/football" element={<FootballHome />} />
         <Route path="/home" element={<HomePage />} />
