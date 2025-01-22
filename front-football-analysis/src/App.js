@@ -7,13 +7,16 @@ import Login from "./pages/football/LoginPage/Login";
 import FootballHome from "./pages/football/FootballPage/FootballHome";
 import LeaguePage from "./pages/football/LeaguePage/LeaguePage";
 import HomePage from "./pages/football/HomePage/HomePage";
+import { DataUpdateProvider } from "./components/updateContext/useDataUpdate";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("authToken"));
 
   return (
     <Router basename="/project-front-football-analysis">
-      <MainContent token={token} setToken={setToken} />
+      <DataUpdateProvider>
+        <MainContent token={token} setToken={setToken} />
+      </DataUpdateProvider>
     </Router>
   );
 }

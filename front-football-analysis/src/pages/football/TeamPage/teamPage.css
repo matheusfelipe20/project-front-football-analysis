@@ -128,7 +128,6 @@
 .panel-analysis {
     display: flex;
     margin-top: 40px;
-    justify-content: space-evenly;
     gap: 20px;
 }
 
@@ -164,6 +163,18 @@
     .panel-analysis {
         margin-top: 40px;
         flex-direction: column;
+    }
+}
+
+@media (min-width: 980px) {
+    .panel-analysis {
+        width: 800px;
+    }
+}
+
+@media (min-width: 1343px) {
+    .panel-analysis {
+        width: 800px;
     }
 }
 

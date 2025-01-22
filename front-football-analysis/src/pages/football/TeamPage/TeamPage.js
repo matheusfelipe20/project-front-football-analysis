@@ -18,19 +18,19 @@ const TeamPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // Verifica se o usuário está logado (token presente)
+    //Verifica se o usuário está logado (token presente)
     const token = localStorage.getItem("authToken");
     setIsLoggedIn(!!token);
 
     const fetchTeamData = async () => {
       try {
-        // Primeira requisição para obter o time
+        //Primeira requisição para obter o time
         const response = await axios.get(
           `https://project-football-analysis-1.onrender.com/football/team/${teamId}`
         );
         setTeam(response.data);
 
-        // Após obter o nome do time, é feito uma segunda requisição para pegar a liga e o país
+        //Após obter o nome do time, é feito uma segunda requisição para pegar a liga e o país
         const teamName = response.data.name;
         const leagueResponse = await axios.get(
           `https://project-football-analysis-1.onrender.com/football/team/search?name=${teamName}`
@@ -63,79 +63,81 @@ const TeamPage = () => {
       .join(' ');
   }
 
-  // Usando require para carregar dinamicamente a bandeira
+  //Usando require para carregar dinamicamente a bandeira
   const flagSrc = countryCode
     ? require(`../../../assets/icons/country/${countryCode.toLowerCase()}.svg`)
     : null;
 
   return (
-    <div className="team-information">
-      <div className="panel-information">
-        <div className="information-header-intro">
-          <img
-            className="information-sport-icon"
-            src={iconFootball}
-            alt="icone bola de futebol"
-          />
-          <p className="information-sport-text">Futebol</p>
-          <p className="information-sport-text">•</p>
-          <div className="information-country">
-            {leagueDetails.country && (
-              <>
-                {flagSrc && (
-                  <img
-                    src={flagSrc}
-                    alt={`${leagueDetails.country} flag`}
-                    className="information-country-flag"
-                  />
-                )}
-                <p className="information-sport-text">{leagueDetails.country}</p>
-              </>
+    <div className="teamPage-body">
+      <div className="team-information">
+        <div className="panel-information">
+          <div className="information-header-intro">
+            <img
+              className="information-sport-icon"
+              src={iconFootball}
+              alt="icone bola de futebol"
+            />
+            <p className="information-sport-text">Futebol</p>
+            <p className="information-sport-text">•</p>
+            <div className="information-country">
+              {leagueDetails.country && (
+                <>
+                  {flagSrc && (
+                    <img
+                      src={flagSrc}
+                      alt={`${leagueDetails.country} flag`}
+                      className="information-country-flag"
+                    />
+                  )}
+                  <p className="information-sport-text">{leagueDetails.country}</p>
+                </>
+              )}
+            </div>
+          </div>
+          <div className="information-conteiner">
+            <div className="information-container-left">
+              <img
+                src={team.imageUrl}
+                alt={team.name}
+                className="information-team-image"
+              />
+              <div className="information-team-info">
+                <h1 className="information-team-name">{abbreviateTeamName(team.name)}</h1>
+                <Divider
+                  width="90%"
+                  color="#c5c5c5"
+                  height={"1px"}
+                  margin={"0px"}
+                />
+                <span className="information-team-leagueName">
+                  {leagueDetails.name}
+                </span>
+                <span className="information-team-leagueDivision">
+                  {leagueDetails.division}
+                </span>
+              </div>
+            </div>
+            <img
+                src={leagueDetails.imageUrl}
+                alt={leagueDetails.name}
+                className="information-league-image"
+              />
+          </div>
+          <div className="information-divider">
+            <Divider width="3%" color="#77715b" height={"2px"} margin={"14px"} />
+          </div>
+          <div className={`info-crud-wrapper ${isLoggedIn ? "" : "restricted-access"}`}>
+              <InfoCrud teamId={teamId} />
+            {!isLoggedIn && (
+              <div className="restricted-overlay"></div>
             )}
           </div>
         </div>
-        <div className="information-conteiner">
-          <div className="information-container-left">
-            <img
-              src={team.imageUrl}
-              alt={team.name}
-              className="information-team-image"
-            />
-            <div className="information-team-info">
-              <h1 className="information-team-name">{abbreviateTeamName(team.name)}</h1>
-              <Divider
-                width="90%"
-                color="#c5c5c5"
-                height={"1px"}
-                margin={"0px"}
-              />
-              <span className="information-team-leagueName">
-                {leagueDetails.name}
-              </span>
-              <span className="information-team-leagueDivision">
-                {leagueDetails.division}
-              </span>
-            </div>
-          </div>
-          <img
-              src={leagueDetails.imageUrl}
-              alt={leagueDetails.name}
-              className="information-league-image"
-            />
+        <div className="panel-analysis">
+            <GraphPanel teamId={teamId} />
+            <AnalysisPanel teamId={teamId} />
         </div>
-        <div className="information-divider">
-          <Divider width="3%" color="#77715b" height={"2px"} margin={"14px"} />
-        </div>
-        <div className={`info-crud-wrapper ${isLoggedIn ? "" : "restricted-access"}`}>
-          <InfoCrud teamId={teamId} />
-          {!isLoggedIn && (
-            <div className="restricted-overlay"></div>
-          )}
-        </div>
-      </div>
-      <div className="panel-analysis">
-        <GraphPanel teamId={teamId} />
-        <AnalysisPanel teamId={teamId} />
       </div>
     </div>
   );

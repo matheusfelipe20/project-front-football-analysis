@@ -7,12 +7,16 @@ import './FootballHome.css'
 const FootballHome = () => (
     <>
     <div className="body-footballHome">
-        <div className="element-championRanking">
-            <ChampionshipsRanking />
-        </div>
-        <div className="element-mid"></div>
-        <div className="element-championCountry">
-            <ChampionCountry />
+        <div className="panel-footballHome">
+            <div className="element-championRanking">
+                <ChampionshipsRanking />
+            </div>
+            <div className="element-mid">
+                <p>Em manutenção</p>
+            </div>
+            <div className="element-championCountry">
+                <ChampionCountry />
+            </div>
         </div>
     </div>
     </>

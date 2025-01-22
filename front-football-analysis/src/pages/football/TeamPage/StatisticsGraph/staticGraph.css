@@ -85,6 +85,7 @@
 .no-result {
     color: #666;
     font-size: 0.6rem;
+    width: 20px;
 }
 
 @media (max-width: 1000px) {

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './infoCrud.css';
 import Divider from '../../../../components/divider/divider';
 import iconSuccess from "../../../../assets/icons/icon-success.svg";
 import iconError from "../../../../assets/icons/icon-error.svg";
+import { useDataUpdate } from "../../../../components/updateContext/useDataUpdate.jsx";
 
 const InfoCrud = ({ teamId }) => {
   const [selectedCategory, setSelectedCategory] = useState('corner');
@@ -16,7 +17,7 @@ const InfoCrud = ({ teamId }) => {
   const [editIndex, setEditIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [isTableCollapsed, setIsTableCollapsed] = useState(true);
-  const [isModified, setIsModified] = useState(false);
+  const { triggerUpdate } = useDataUpdate();
 
   const tableNames = {
     cornerHome: 'Escanteios - Casa',
@@ -27,18 +28,19 @@ const InfoCrud = ({ teamId }) => {
     cardsOut: 'Cartão - Fora',
   };
 
-  useEffect(() => {
-    loadData(teamId, setData);
-  }, [selectedTable, teamId]);
-
-  const loadData = async (teamId, setData) => {
+  const loadData = useCallback(async () => {
     try {
       const response = await axios.get(`https://project-football-analysis-1.onrender.com/football/team/${teamId}`);
       setData(response.data);
     } catch (error) {
       setApiStatus({ type: 'error', message: 'Erro ao carregar os dados.' });
     }
-  };
+  }, [teamId]);
+
+  //O useEffect carrega os dados apenas uma vez, quando o componente é montado
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   const addValue = async () => {
     try {
@@ -50,7 +52,8 @@ const InfoCrud = ({ teamId }) => {
       );
       setApiStatus({ type: 'success', message: 'Adicionado com sucesso!' });
       setValue('');
-      setIsModified(true);
+      triggerUpdate(true);
+      loadData();
     } catch (error) {
       setApiStatus({ type: 'error', message: 'Erro ao adicionar o valor.' });
     }
@@ -66,7 +69,8 @@ const InfoCrud = ({ teamId }) => {
       setApiStatus({ type: 'success', message: 'Editado com sucesso!' });
       setEditValue('');
       setEditIndex(null);
-      setIsModified(true);
+      triggerUpdate(true);
+      loadData();
     } catch (error) {
       setApiStatus({ type: 'error', message: 'Erro ao editar o valor.' });
     }
@@ -80,8 +84,8 @@ const InfoCrud = ({ teamId }) => {
           `https://project-football-analysis-1.onrender.com/football/team/${teamId}/${selectedTable}/${index}`
         );
         setApiStatus({ type: 'success', message: 'Removido com sucesso!' });
-        setIsModified(true);
-        loadData(teamId, setData);
+        triggerUpdate(true);
+        loadData();
       } catch (error) {
         setApiStatus({ type: 'error', message: 'Erro ao remover o valor.' });
       }
@@ -100,9 +104,15 @@ const InfoCrud = ({ teamId }) => {
     setApiStatus(null);
   };
 
-  const handleSaveChanges = () => {
-    window.location.reload();
-  };
+  //Usado para fechar a mensagem de Sucesso/Erro automaticamente após x segundos
+  useEffect(() => {
+    if (apiStatus) {
+      const timer = setTimeout(() => {
+        setApiStatus(null);
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [apiStatus]);
 
   return (
     <div className="graph-panel">
@@ -245,12 +255,7 @@ const InfoCrud = ({ teamId }) => {
             </button>
             </div>
         )}
-        </div>
-        <div className="save-changes">
-            <button className="save-changes-button" onClick={handleSaveChanges}disabled={!isModified}>
-                Salvar Modificações
-            </button>
-        </div>
+      </div>
     </div>
   );
 };

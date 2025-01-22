@@ -219,30 +219,6 @@ table th, table td {
     gap: 10px;
 }
 
-.save-changes {
-    display: flex;
-    justify-content: center;
-}
-
-.save-changes-button {
-    cursor: pointer;
-    background-color: #006eff;
-    color: #fff;
-    border: none;
-    height: 20px;
-    width: 60%;
-    border-radius: 4px;
-}
-
-.save-changes-button:disabled {
-    background-color: #dadada;
-    color: #999999;
-    border: none;
-    height: 20px;
-    width: 60%;
-    border-radius: 4px;
-}
-
 .edit-popup-button-confirmation {
     background-color: #20c000;
     border: none;

@@ -1,7 +1,14 @@
 .body-footballHome {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
+}
+
+.panel-footballHome {
+    display: flex;
+    justify-content: space-between;
+    width: 980px;
 }
 
 .element-championCountry {
@@ -22,5 +29,17 @@
 
     .body-footballHome {
         flex-direction: column;
+    }
+}
+
+@media (min-width: 980px) {
+    .panel-footballHome {
+        width: 980px;
+    }
+}
+
+@media (min-width: 1343px) {
+    .panel-footballHome {
+        width: 1343px;
     }
 }
