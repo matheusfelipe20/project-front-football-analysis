@@ -1,0 +1,380 @@
+.table-monthly {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    background-color: #242424;
+    height: 100vh;
+    gap: 120px;
+}
+
+.table-monthly-title {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.table-monthly-title > h1{
+    margin: 0px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #fff;
+}
+
+.table-monthly-title > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+.table-monthly-icon {
+    width: 20px;
+}
+
+/* PopUP  Editar Tabela */
+
+.popup-editTableMonthly {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-editTableMonthly > h2{
+    margin: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.popup-editTableMonthly > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-editTableMonthly{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-editTableMonthly > input{
+    width: 96%;
+    border: 1px solid #5e5e5e;
+}
+
+.label-editTableMonthly {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.label-text-editTableMonthly {
+    font-size: 0.8rem;
+    color: #4b4b4b;
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.popup-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Bets */
+
+.table-bet-monthly {
+    display: flex;
+    gap: 10px;
+}
+
+.table-bet-monthly > p{
+    margin-top: 0px;
+    color: #fff;
+}
+
+.bets-monthly-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bets-monthly-title > h2{
+    margin: 0px;
+    color: #fff;
+}
+
+.bets-add-monthly {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.bets-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bets-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    gap: 25px;
+}
+
+.bets-list-dash {
+    display: flex;
+    gap: 10px;
+}
+
+.bets-list-dash > p {
+    margin-bottom: 5px;
+}
+
+.bets-list-date {
+    display: flex;
+}
+
+.bets-list-date > p{
+    margin: 0px;
+    color: #ffffffa2;
+    font-size: 0.8rem;
+}
+
+.bets-list-painel {
+    display: flex;
+    flex-direction: column;
+}
+
+.bets-list-betValue {
+    width: 145px;
+}
+
+.bets-list-odd {
+    width: 55px;
+    text-align: center;
+}
+
+.bets-list-betReturn {
+    width: 120px;
+}
+
+.bets-list-text {
+    border: 1px solid #fff;
+}
+
+.green {
+    background-color: #008a00;
+}
+
+.red {
+    background-color: #c70000;
+}
+
+.bets-list-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bets-list-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bets-list-actions > button:hover {
+    filter: brightness(0);
+}
+
+.bets-list .empty {
+    background-color: #fff;
+    color: #6b6b6b;
+    text-align: center;
+}
+
+.bets-list-text-empty {
+    border: 1px solid #6b6b6b;
+}
+
+.bets-list-date-empty {
+    display: flex;
+}
+
+.bets-list-date-empty > p{
+    margin: 0px;
+    color: #6b6b6b;
+    font-size: 0.8rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* PopUP Adicionar/Editar Bet  */
+
+.popup-addBetMonthly {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-addBetMonthly > h2{
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.popup-addBetMonthly > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-addBetMonthly{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 2px;
+}
+
+.input-addBetMonthly > input{
+    width: 96%;
+    border: 1px solid #5e5e5e;
+}
+
+.input-addBetMonthly > select{
+    border: 1px solid #5e5e5e;
+}
+
+.label-addBetMonthly {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.label-text-addBetMonthly {
+    font-size: 0.8rem;
+    color: #4b4b4b;
+}
+
+@media (max-width: 768px) {
+    .table-monthly-painel {
+        border-bottom: 1px solid #fff;
+    }
+
+    .table-monthly {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        height: auto;
+    }
+    
+    .table-monthly-title > h1{
+        font-size: 1.8rem;
+    }
+
+    .table-bet-monthly > p {
+        margin-bottom: 5px;
+    }
+    
+    /* PopUP  Editar Tabela */
+    
+    .popup-editTableMonthly {
+        width: 250px;
+        height: 230px;
+    }
+    
+    .input-editTableMonthly > input{
+        height: 30px;
+    } 
+    
+    /* Bets */
+    
+    .bets-monthly-title > h2{
+        font-size: 1.4rem;
+    }
+    
+    .bets-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .bets-list li {
+        gap: 15px;
+        width: 97%;
+    }
+    
+    .bets-list-dash {
+        display: flex;
+        gap: 5px;
+    }
+
+    .bets-list-betValue {
+        width: 110px;
+    }
+
+    .bets-list-odd {
+        width: 45px;
+        text-align: center;
+    }
+
+    .bets-list-betReturn {
+        width: 100px;
+    }
+
+    .bets-list-dash > p {
+        font-size: 0.75rem;
+    }
+    
+    .pagination button {
+        font-size: 12px;
+    }
+
+    .pagination span {
+        font-size: 12px;
+    }
+}

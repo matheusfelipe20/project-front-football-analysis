@@ -1,6 +1,7 @@
 :root {
     /* Body System */
-    --color-primary: #fec300;
+    --color-primary: #65db32;
+    --color-secundary: #111517;
     --background-primary: #e9f3ff;
 
     /* Carousel Component */

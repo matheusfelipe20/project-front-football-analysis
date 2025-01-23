@@ -6,8 +6,11 @@ import TeamPage from "./pages/football/TeamPage/TeamPage";
 import Login from "./pages/football/LoginPage/Login";
 import FootballHome from "./pages/football/FootballPage/FootballHome";
 import LeaguePage from "./pages/football/LeaguePage/LeaguePage";
-import HomePage from "./pages/football/HomePage/HomePage";
+import HomePage from "./pages/home/HomePage/HomePage";
 import { DataUpdateProvider } from "./components/updateContext/useDataUpdate";
+import TableBetPage from "./pages/tableBet/TableBetPage";
+import TableMonthly from "./pages/tableBet/TableMonthly/TableMonthly";
+import PrivateRoute from "./components/routes/PrivateRoute";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("authToken"));
@@ -26,12 +29,17 @@ function MainContent({ token, setToken }) {
     <div className="App">
       <Header token={token} setToken={setToken} />
       <Routes>
+        {/* Rotas Públicas */}
         <Route path="/" element={<Navigate to="/football" />} />
         <Route path="/login" element={<Login setToken={setToken} />} />
         <Route path="/football" element={<FootballHome />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/football/team/:teamId" element={<TeamPage />} />
         <Route path="/football/league/:leagueId" element={<LeaguePage />} />
+
+        {/* Rotas Privadas */}
+        <Route path="/tableBet" element={<PrivateRoute><TableBetPage /></PrivateRoute>} />
+        <Route path="/tableBet/dashbord/:tablemonthlyId" element={<PrivateRoute><TableMonthly /></PrivateRoute>} />
       </Routes>
     </div>
   );

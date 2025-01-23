@@ -5,6 +5,7 @@ import "./Tabs.css";
 
 import iconHome from "../../assets/icons/icon-home.svg";
 import iconFootball from "../../assets/icons/icon-football.svg";
+import iconTableBet from "../../assets/icons/icon-table.svg";
 
 const Tabs = () => {
   const location = useLocation();
@@ -12,6 +13,7 @@ const Tabs = () => {
   const tabs = [
     { id: "home", label: "Inicio", icon: iconHome, path: "/home" },
     { id: "football", label: "Futebol", icon: iconFootball, path: "/football" },
+    { id: "tableBet", label: "GestãoBet", icon: iconTableBet, path: "/tableBet" },
   ];
 
   return (

@@ -1,5 +1,8 @@
-body {
-  background-color: var(--background-primary);
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--background-primary); /*Cor de fundo padrão*/
 }
 
 

@@ -3,12 +3,10 @@ import './CarouselImage.css';
 
 import ImageCarousel1 from '../../assets/carousel/footballPage/football-1.png';
 import ImageCarousel2 from '../../assets/carousel/footballPage/football-2.png';
-import ImageCarousel3 from '../../assets/carousel/footballPage/football-3.png';
 
 const ImageCarousel = [
     ImageCarousel1,
     ImageCarousel2,
-    ImageCarousel3,
 ];
   
 const CarouselImage = () => {

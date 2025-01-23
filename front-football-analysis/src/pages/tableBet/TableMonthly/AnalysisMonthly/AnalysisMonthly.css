@@ -1,0 +1,31 @@
+.analysis-monthly {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.chart-container-graph1  > h3 {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.chart-container-graph2  > h3 {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .chart-container-graph1 {
+        width: 280px;
+    }
+
+    .chart-container-graph2 {
+        width: 280px;
+    }
+}
