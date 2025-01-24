@@ -1,0 +1,44 @@
+.match-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.match-time {
+    width: 50px;
+    font-weight: bold;
+    color: #555;
+}
+
+.match-teams {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.team {
+    font-weight: 500;
+}
+
+.vs {
+    margin: 0 5px;
+    color: #888;
+}
+
+.match-favorite > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.match-favorite img {
+    width: 16px;
+    transition: transform 0.2s ease;
+}
+  
+.match-favorite img:hover {
+    transform: scale(1.2);
+}

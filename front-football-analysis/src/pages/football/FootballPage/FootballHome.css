@@ -7,27 +7,33 @@
 
 .panel-footballHome {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 980px;
 }
 
-.element-championCountry {
-    padding: 10px 20px;
+.element-componentChampion {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px 0px;
+    gap: 20px;
 }
 
-.element-mid {
-    padding: 10px 20px;
-    background-color: #ffffff;
-}
-
-.element-championRanking {
+.element-matchTeam {
     padding: 10px 20px;
 }
 
 @media (max-width: 768px) {
+    .panel-footballHome {
+        width: 100%;
+        flex-direction: column;
+    }
 
     .body-footballHome {
         flex-direction: column;
+    }
+
+    .element-componentChampion {
+        padding: 10px 20px 20px 20px;
     }
 }
 

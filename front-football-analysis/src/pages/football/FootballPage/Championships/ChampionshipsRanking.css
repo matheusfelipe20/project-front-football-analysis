@@ -1,7 +1,7 @@
 .championships-ranking {
     text-align: center;
     padding: 10px 15px;
-    width: 200px;
+    width: 220px;
     border-radius: 18px;
     background-color: var(--background-panel-default);
     box-shadow: var(--shadow-panel-default);
@@ -11,8 +11,6 @@
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 1px;
-    margin-top: 0px;
-    margin-bottom: 5px;
 }
   
 .championships-list {
@@ -67,4 +65,10 @@
   background-color: #e0e0e0;
   border-radius: 4px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .championships-ranking {
+        width: auto;
+    }
 }

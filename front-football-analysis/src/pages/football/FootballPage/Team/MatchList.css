@@ -1,0 +1,70 @@
+.match-list {
+    background-color: var(--background-panel-default);
+    padding: 5px 20px;
+    border-radius: 18px;
+    box-shadow: var(--shadow-panel-default);
+    border: var(--border-panel-default);
+}
+
+.match-list > h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.championship-section {
+    margin-bottom: 15px;
+}
+
+.championship-title-list {
+    display: flex;
+    gap: 10px;
+    width: 300px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.championship-title-flags {
+    display: flex;
+    gap: 5px;
+}
+
+.championship-title-flags > p {
+    margin: 0px;
+    font-size: 0.8rem;
+    color: #313131;;
+    font-weight: 500;
+}
+
+.championship-title-list > p{
+    margin: 0px;
+    color: #313131;;
+    font-size: 0.8rem;
+}
+
+.match-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0px;
+    color: #313131;
+}
+
+.matchList-date > p{
+    font-size: 0.8rem;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    color: #888;
+    font-weight: 500;
+}
+
+.match-item:last-child {
+    border-bottom: none;
+}
+
+.matchList-flag-icon {
+    width: 18px;
+    
+}

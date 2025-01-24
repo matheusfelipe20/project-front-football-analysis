@@ -1,5 +1,5 @@
 .champion-panelCountry {
-  width: 200px;
+  width: 220px;
   padding: 10px 15px;
   border-radius: 18px;
   background-color: var(--background-panel-default);
@@ -84,4 +84,10 @@
   margin: 0px;
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .champion-panelCountry {
+      width: auto;
+  }
 }
