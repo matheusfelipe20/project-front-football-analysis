@@ -77,12 +77,12 @@
 
 @media (min-width: 980px) {
     .match-list {
-        width: 500px;
+        width: 420px;
     }
 }
 
 @media (min-width: 1343px) {
     .match-list {
-        width: 500px;
+        width: 420px;
     }
 }

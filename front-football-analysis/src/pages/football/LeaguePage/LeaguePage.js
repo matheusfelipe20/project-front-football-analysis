@@ -33,14 +33,6 @@ const LeaguePage = () => {
     );
   }
 
-  function abbreviateTeamName(name) {
-    const words = name.split(' ');
-    
-    return words
-      .map((word, index) => (index === 0 ? word : `${word.charAt(0)}.`))
-      .join(' ');
-  }
-
   const countryCode = Object.keys(countries).find(
     (key) => countries[key] === leagueDetails.country
   );
@@ -80,7 +72,7 @@ const LeaguePage = () => {
                   alt={team.teamName}
                   className="league-team-card-image"
                 />
-                <p className="league-team-card-name">{abbreviateTeamName(team.teamName)}</p>
+                <p className="league-team-card-name">{team.teamName}</p>
               </div>
             </Link>
           ))}
