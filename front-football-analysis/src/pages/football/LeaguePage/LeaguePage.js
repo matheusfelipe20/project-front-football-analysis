@@ -42,40 +42,42 @@ const LeaguePage = () => {
     : null;
 
   return (
-    <div className="league-page">
-      <div className="league-info">
-        <img src={leagueDetails.imageUrl} alt={leagueDetails.name} className="league-image"/>
-        <div className="league-details">
-          <h1 className="league-name">{leagueDetails.name}</h1>
-          <p className="league-division">{leagueDetails.division} | Futebol</p>
-          <Divider margin={'0px'} height={'1px'} color="var(--color-divider-panel-League)" width="100%"/>
-          <div className="league-country-panel">
-            {flagSrc && (
-              <img src={flagSrc} alt={`${leagueDetails.country} flag`} className="league-country-flag"/>
-            )}
-            <p className="league-country-name">{leagueDetails.country}</p>
+    <div className="league-body">
+      <div className="league-page">
+        <div className="league-info">
+          <img src={leagueDetails.imageUrl} alt={leagueDetails.name} className="league-image"/>
+          <div className="league-details">
+            <h1 className="league-name">{leagueDetails.name}</h1>
+            <p className="league-division">{leagueDetails.division} | Futebol</p>
+            <Divider margin={'0px'} height={'1px'} color="var(--color-divider-panel-League)" width="100%"/>
+            <div className="league-country-panel">
+              {flagSrc && (
+                <img src={flagSrc} alt={`${leagueDetails.country} flag`} className="league-country-flag"/>
+              )}
+              <p className="league-country-name">{leagueDetails.country}</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="league-teams-section">
-        <div className="league-teams-header">
-            <h2>Times Participantes</h2>
-            <p>- útilma atualização em 2025</p>
-        </div>
-        <div className="league-teams-grid">
-          {leagueDetails.teams.map((team) => (
-            <Link to={`/football/team/${team.id}`} key={team.id} className="team-card-link">
-              <div className="league-team-card">
-                <img
-                  src={team.imageUrl}
-                  alt={team.teamName}
-                  className="league-team-card-image"
-                />
-                <p className="league-team-card-name">{team.teamName}</p>
-              </div>
-            </Link>
-          ))}
+        <div className="league-teams-section">
+          <div className="league-teams-header">
+              <h2>Times Participantes</h2>
+              <p>- útilma atualização em 2025</p>
+          </div>
+          <div className="league-teams-grid">
+            {leagueDetails.teams.map((team) => (
+              <Link to={`/football/team/${team.id}`} key={team.id} className="team-card-link">
+                <div className="league-team-card">
+                  <img
+                    src={team.imageUrl}
+                    alt={team.teamName}
+                    className="league-team-card-image"
+                  />
+                  <p className="league-team-card-name">{team.teamName}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,10 @@
+.league-body {
+    display: flex;
+    justify-content: center;
+}
+
 .league-page {
+    width: 980px;
     padding: 5px 20px;
     display: flex;
     flex-direction: column;
@@ -136,6 +142,9 @@
 
 
 @media (max-width: 768px) {
+    .league-page {
+        width: auto;
+    }
 
     .league-teams-header > h2{
         font-size: 0.9rem;
@@ -167,5 +176,17 @@
     
     .league-division {
         font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 980px) {
+    .league-page {
+        width: 940px;
+    }
+}
+
+@media (min-width: 1343px) {
+    .league-page {
+        width: 1303px;
     }
 }

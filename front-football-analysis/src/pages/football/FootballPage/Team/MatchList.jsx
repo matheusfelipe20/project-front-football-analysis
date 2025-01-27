@@ -61,7 +61,7 @@ const MatchList = () => {
 
   return (
     <div className="match-list">
-        <h1>Destaques</h1>
+        <h1>Cronograma</h1>
         <Divider width="100%" color="#e1e1e1" height={"2px"} margin={"0px"} />
       {championships.map((championship, index) => {
 
