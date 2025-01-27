@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-front-football-analysis/static/css/main.ac923528.css",
-    "main.js": "/project-front-football-analysis/static/js/main.c5f958d9.js",
+    "main.js": "/project-front-football-analysis/static/js/main.5735b937.js",
     "static/js/488.afde171c.chunk.js": "/project-front-football-analysis/static/js/488.afde171c.chunk.js",
     "static/media/mp.svg": "/project-front-football-analysis/static/media/mp.0c771c14213d9536f2e8.svg",
     "static/media/sv.svg": "/project-front-football-analysis/static/media/sv.1dfe9aaa83a48b8b6d48.svg",
@@ -277,11 +277,11 @@
     "static/media/ua.svg": "/project-front-football-analysis/static/media/ua.f8cca1b6202785b4fb56.svg",
     "static/media/id.svg": "/project-front-football-analysis/static/media/id.ffa58d55dd7e95dd504d.svg",
     "main.ac923528.css.map": "/project-front-football-analysis/static/css/main.ac923528.css.map",
-    "main.c5f958d9.js.map": "/project-front-football-analysis/static/js/main.c5f958d9.js.map",
+    "main.5735b937.js.map": "/project-front-football-analysis/static/js/main.5735b937.js.map",
     "488.afde171c.chunk.js.map": "/project-front-football-analysis/static/js/488.afde171c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac923528.css",
-    "static/js/main.c5f958d9.js"
+    "static/js/main.5735b937.js"
   ]
 }
