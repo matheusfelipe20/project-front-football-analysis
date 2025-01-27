@@ -1,0 +1,95 @@
+/* Painel geral do placar */
+
+.score-live {
+    background-color: var(--background-panel-default);
+    padding: 10px 20px;
+    border-radius: 18px;
+    box-shadow: var(--shadow-panel-default);
+    border: var(--border-panel-default); 
+}
+
+.score-live > h2{
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.score-live-text {
+    display: flex;
+    margin-bottom: 5px;
+    gap: 3px;
+}
+
+.score-live-text > img {
+    width: 16px;
+}
+
+.score-live-text > p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #911111;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Painel dos times */
+
+.panel-team-score {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.score-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.score-team > img {
+    width: 42px;
+    object-fit: contain;
+}
+
+.score-team > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.65rem;
+    font-weight: 500;
+}
+
+/* Painel real do placar */
+
+.panel-score-game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score-game {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.score-game > p {
+    margin: 0px;
+    font-weight: 600;
+    color: #000;
+}
+
+.score-time {
+    text-align: center;
+    font-size: 0.6rem;
+    margin: 0px;
+    font-weight: 500;
+    color: #757575;
+}
+
+@media (max-width: 768px) {
+    .score-live-text {
+        justify-content: center;
+    }
+}

@@ -11,6 +11,10 @@
     width: 980px;
 }
 
+.element-scoreLive {
+    padding: 10px 0px 10px 20px;
+}
+
 .element-componentChampion {
     display: flex;
     flex-direction: column;
@@ -34,6 +38,10 @@
 
     .element-componentChampion {
         padding: 10px 20px 20px 20px;
+    }
+
+    .element-scoreLive {
+        padding: 10px 20px 10px 20px;
     }
 }
 

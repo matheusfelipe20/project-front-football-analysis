@@ -19,6 +19,16 @@
     font-size: 14px;
 }
 
+.match-team {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.match-logo-team {
+    width: 16px;
+}
+
 .team {
     font-weight: 500;
 }
