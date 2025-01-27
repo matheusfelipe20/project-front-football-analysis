@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import countries from '../../../../assets/icons/country/countries.json';
 import Divider from "../../../../components/divider/divider";
 import './ChampionCountry.css';
+import { Link } from 'react-router-dom';
 
 const ChampionCountry = () => {
   const [countriesData, setCountriesData] = useState([]);
@@ -62,18 +63,10 @@ const ChampionCountry = () => {
           {expandedCountries[country] && (
             <div className="panelCountry-leagues-list">
               {leagues.map((league) => (
-                <a
-                  key={league.id}
-                  href={`football/league/${league.id}`}
-                  className="panelCountry-league-item"
-                >
-                  <img
-                    src={league.imageUrl}
-                    alt={league.name}
-                    className="panelCountry-league-image"
-                  />
-                  <p className="panelCountry-league-name">{league.name}</p>
-                </a>
+                <Link key={league.id} to={`/football/league/${league.id}`} className="panelCountry-league-item">
+                    <img src={league.imageUrl} alt={league.name} className="panelCountry-league-image"/>
+                    <p className="panelCountry-league-name">{league.name}</p>
+                </Link>
               ))}
             </div>
           )}
